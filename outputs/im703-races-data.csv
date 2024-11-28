@@ -14,138 +14,117 @@ IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° 
 IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
 IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
 IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
-IRONMAN 70.3 Middle East Championship Bahrain,"Bahrain, Middle East",Bay,Flat,Flat,72° F / 22° C,73° F / 23° C,BAH
-IRONMAN 70.3 Cartagena,"Cartagena, Colombia",Bay,Flat,Flat,84° F / 29° C,81° F / 27° C,CTG
-IRONMAN 70.3 Acapulco,"Acapulco, Mexico",Ocean,Rolling,Flat,88° F / 31° C,84° F / 29° C,ACA
-IRONMAN 70.3 Western Australia Asia-Pacific Championship,"Busselton, Western Australia",Bay,Flat,Flat,81° F / 27° C,68° F / 20° C,PER
-IRONMAN 70.3 Indian Wells La Quinta,"Indian Wells, California",Lake,Flat,Rolling,65° F / 18° C,57° F / 14° C,PSP
-IRONMAN 70.3 World Championship - Women,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Florida,"Haines City, Florida",Lake,Rolling,Rolling,71° F / 22° C,71° F / 22° C,MCO
-IRONMAN 70.3 World Championship - Men,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,64° F / 18° C,TUO
-IRONMAN 70.3 Pucon,"Pucon, Chile",Lake,Rolling,Hilly,64° F / 18° C,66° F / 19° C,ZCO
-IRONMAN 70.3 Oman,"Muscat, Oman",Ocean,Rolling,Flat,75° F / 24° C,75° F / 24° C,MCT
-IRONMAN 70.3 New Zealand,"Taupo, Waikato",Lake,Rolling,Flat,70° F / 21° C,65° F / 18° C,TUO
-IRONMAN 70.3 Monterrey,"Monterrey, Mexico",River,Flat,Flat,77° F / 25° C,77° F / 25° C,MTY
-IRONMAN 70.3 Puerto Princesa,"Puerto Princesa, Phillippines",Bay,Rolling,Rolling,89° F / 32° C,84° F / 29° C,PPS
-IRONMAN 70.3 Punta del Este,"Punta del Este, Uruguay",Ocean,Hilly,Flat,70° F / 21° C,73° F / 23° C,MVD
-IRONMAN 70.3 Puerto Rico,"San Juan, Puerto Rico, United States Territory",Bay,Flat,Hilly,80° F / 27° C,80° F / 27° C,SJU
+IRONMAN 70.3 Campeche,"Campeche, Mexico",Ocean,Flat,Flat,86° F / 30° C,82° F / 28° C,CPE
+IRONMAN 70.3 Geelong,"Geelong, Victoria",Bay,Rolling,Rolling,67° F / 19° C,64° F / 18° C,MEL
+IRONMAN 70.3 Panama,"Panamá City, Panamá",Reservoir,Flat,Flat,83° F / 28° C,80° F / 27° C,PTY
+IRONMAN 70.3 Oceanside,"Oceanside, California",Ocean,Rolling,Rolling,66° F / 19° C,61° F / 16° C,SAN
+IRONMAN 70.3 Texas,"Galveston, Texas",Ocean,Flat,Rolling,70° F / 21° C,71° F / 22° C,HOU
+IRONMAN 70.3 San Juan,"San Juan, Argentina",Reservoir,Hilly,Flat,77° F / 25° C,68° F / 20° C,UAQ
+IRONMAN 70.3 Brasilia,"Brasilia, Brazil",Lake,Flat,Flat,78° F / 26° C,72° F / 22° C,BSB
+IRONMAN 70.3 Peru,"Lima, Perú",Ocean,Flat,Flat,70° F / 21° C,70° F / 21° C,LIM
+IRONMAN 70.3 Valencia,"Valencia, Spain",Ocean,Rolling,Flat,68° F / 20° C,63° F / 17° C,VLC
+IRONMAN 70.3 Port Macquarie,"Port Macquarie, New South Wales",River,Rolling,Flat,70° F / 21° C,73° F / 23° C,PQQ
+IRONMAN 70.3 Venice-Jesolo,"Jesolo, Italy",Ocean,Flat,Flat,70° F / 21° C,63° F / 17° C,VCE
+IRONMAN 70.3 Cap Cana,"Cap Cana, Dominican Republic",Ocean,Flat,Flat,86° F / 30° C,83° F / 28° C,PUJ
+IRONMAN 70.3 Alcúdia-Mallorca,"Alcúdia, Mallorca, Spain",Ocean,Hilly,Flat,77° F / 25° C,63° F / 17° C,PMI
+IRONMAN 70.3 Gulf Coast,"Panama City Beach, Florida",Ocean,Flat,Flat,78° F / 26° C,71° F / 22° C,ECP
+IRONMAN 70.3 St. George North American Championship,"St. George, Utah",Reservoir,Hilly,Hilly,73° F / 23° C,60° F / 16° C,SGU
+IRONMAN 70.3 Viet Nam,"Da Nang, Viet Nam",Ocean,Flat,Flat,84° F / 29° C,86° F / 30° C,DAD
+IRONMAN 70.3 Aix-en-Provence,"Aix-en-Provence, France",Lake,Hilly,Rolling,68° F / 20° C,61° F / 16° C,MRS
+IRONMAN 70.3 Chattanooga,"Chattanooga, Tennessee",River,Rolling,Rolling,71° F / 22° C,72° F / 22° C,CHA
+IRONMAN 70.3 Desaru Coast,"Desaru Coast, Malaysia",Ocean,Rolling,Rolling,82° F / 28° C,82° F / 28° C,JHB
+IRONMAN 70.3 Kraichgau,"Kraichgau, Baden-Württemberg, Germany",Lake,Hilly,Rolling,72° F / 22° C,73° F / 23° C,FKB
+IRONMAN 70.3 Victoria,"Victoria, British Columbia",Lake,Rolling,Flat,65° F / 18° C,66° F / 19° C,YYJ
+IRONMAN 70.3 Hawaii,"Kohala Coast, Hawaii",Ocean,Rolling,Rolling,80° F / 27° C,75° F / 24° C,KOA
+IRONMAN 70.3 Durban,Kwa Zulu Natal,Ocean,Rolling,Flat,72° F / 22° C,72° F / 22° C,DUR
+IRONMAN 70.3 Switzerland,"Rapperswil-Jona, Switzerland",Lake,Hilly,Rolling,68° F / 20° C,63° F / 17° C,ZRH
+IRONMAN 70.3 Tours Métropole - Loire Valley,"Tours, France",River,Flat,Flat,75° F / 24° C,66° F / 19° C,TUF
+IRONMAN 70.3 Japan,"Tahara City, Toyohashi City, Japan&nbsp;",Ocean,Flat,Flat,71° F / 22° C,71° F / 22° C,NGO
+IRONMAN 70.3 Warsaw,"Warsaw, Poland",Lake,Flat,Flat,73° F / 23° C,65° F / 18° C,WAW
+IRONMAN 70.3 Eagleman,"Cambridge, Maryland",River,Flat,Flat,80° F / 27° C,75° F / 24° C,BWI
+IRONMAN 70.3 Des Moines,"Des Moines, Iowa",Lake,Rolling,Flat,71° F / 22° C,72° F / 22° C,DSM
+IRONMAN 70.3 Western Massachusetts,"Springfield, Massachusetts",River,Hilly,Hilly,70° F / 21° C,67° F / 19° C,BDL
+IRONMAN 70.3 Bolton,"Bolton, England",Lake,Rolling,Rolling,68° F / 20° C,66° F / 19° C,MAN
+IRONMAN 70.3 Boulder,"Boulder, Colorado",Reservoir,Hilly,Hilly,78° F / 26° C,62° F / 17° C,DEN
+IRONMAN 70.3 Subic Bay,"Subic Bay, Philippines",Ocean,Flat,Rolling,92° F / 33° C,82° F / 28° C,CRK
+IRONMAN 70.3 Pennsylvania Happy Valley,"Happy Valley, Pennsylvania",Lake,Hilly,Rolling,78° F / 26° C,76° F / 24° C,SCE
+IRONMAN 70.3 Cairns,"Cairns, Queensland",Ocean,Rolling,Flat,79° F / 26° C,73° F / 23° C,CNS
+IRONMAN 70.3 San Andres,"San Andrés Islas, Colombia",Ocean,Flat,Flat,82° F / 28° C,82° F / 28° C,ADZ
+IRONMAN 70.3 Elsinore,"Elsinore, Denmark",Bay,Rolling,Flat,69° F / 21° C,63° F / 17° C,CPH
+IRONMAN 70.3 Westfriesland,"Westfriesland, Netherlands",Lake,Flat,Flat,68° F / 20° C,63° F / 17° C,AMS
+IRONMAN 70.3 Mont Tremblant,"Mont-Tremblant, Quebec",Lake,Hilly,Rolling,63° F / 17° C,64° F / 18° C,YUL
+IRONMAN 70.3 Coeur d'Alene,"Coeur d'Alene, Idaho",Lake,Hilly,Rolling,75° F / 24° C,62° F / 17° C,GEG
+IRONMAN 70.3 Rockford Illinois,"Rockford, Illinois",River,Rolling,Flat,81° F / 27° C,79° F / 26° C,ORD | RFD
+IRONMAN 70.3 Nice,"Nice, France",Ocean,Hilly,Flat,75° F / 24° C,72° F / 22° C,NCE
+IRONMAN 70.3 Jonkoping European Championship,"Jönköping, Sweden",Lake,Rolling,Flat,72° F / 22° C,68° F / 20° C,JKG
+IRONMAN 70.3 Muskoka,"Huntsville, Ontario",Lake,Rolling,Hilly,78° F / 26° C,68° F / 20° C,YYZ
+IRONMAN 70.3 Muncie,"Muncie, Indiana",Reservoir,Flat,Rolling,82° F / 28° C,77° F / 25° C,IND
+IRONMAN 70.3 Luxembourg Remich-Région Moselle,"Region Moselle, Luxembourg",River,Rolling,Flat,77° F / 25° C,73° F / 23° C,LUX
+IRONMAN 70.3 Musselman,"Geneva, New York",Lake,Rolling,Rolling,70° F / 21° C,72° F / 22° C,ROC
+IRONMAN 70.3 Swansea,"Swansea, Wales",Ocean,Hilly,Flat,66° F / 19° C,60° F / 16° C,CWL
+IRONMAN 70.3 Ohio,"Sandusky, Ohio",Lake,Flat,Flat,88° F / 31° C,78° F / 26° C,CLE
+IRONMAN 70.3 Ecuador,"Manta, Manabi",Ocean,Flat,Flat,77° F / 25° C,78° F / 26° C,MEC
+IRONMAN 70.3 Oregon,"Salem, Oregon",River,Flat,Flat,80° F / 27° C,65° F / 18° C,PDX
+IRONMAN 70.3 Boise,"Boise, Idaho",Reservoir,Rolling,Flat,81° F / 27° C,72° F / 22° C,BOI
+IRONMAN 70.3 Calgary,"Calgary, Alberta",Lake,Hilly,Flat,73° F / 23° C,70° F / 21° C,YYC
+IRONMAN 70.3 Maine,"Augusta, Maine",River,Rolling,Rolling,65° F / 18° C,72° F / 22° C,PWM
+IRONMAN 70.3 Rio de Janeiro,"Rio de Janeiro, Brazil",Ocean,Flat,Flat,80° F / 27° C,73° F / 23° C,GIG
+IRONMAN 70.3 Lapu-Lapu,"Lapu-Lapu, Cebu, Philippines",Ocean,Flat,Flat,92° F / 33° C,82° F / 28° C,CEB
+IRONMAN 70.3 Louisville,"Louisville, Kentucky",River,Rolling,Rolling,85° F / 29° C,80° F / 27° C,SDF
+IRONMAN 70.3 Hradec Králové,"Hradec Králové, Czech Republic",River,Rolling,Flat,73° F / 23° C,65° F / 18° C,PRG
+IRONMAN 70.3 Vichy,"Vichy, France",Lake,Hilly,Flat,83° F / 28° C,77° F / 25° C,LYS
+IRONMAN 70.3 Tallinn,"Tallinn, Estonia",Bay,Flat,Flat,62° F / 17° C,64° F / 18° C,TLL
+IRONMAN 70.3 Zell am See-Kaprun,"Zell am See, Austria",Lake,Rolling,Flat,66° F / 19° C,63° F / 17° C,SZG
+IRONMAN 70.3 Wisconsin,"Madison, Wisconsin",Lake,Rolling,Rolling,71° F / 22° C,69° F / 21° C,MSN
+IRONMAN 70.3 Santa Cruz,"Santa Cruz, California",Ocean,Rolling,Flat,65° F / 18° C,63° F / 17° C,SJC
+IRONMAN 70.3 Duisburg,"Duisburg, Germany",Lake,Rolling,Flat,77° F / 25° C,70° F / 21° C,DUS
+IRONMAN 70.3 Poznan,"Poznan, Poland",Lake,Flat,Flat,73° F / 23° C,65° F / 18° C,POZ
+"IRONMAN 70.3 Knokke-Heist, Belgium","Knokke-Heist, Flanders, Belgium",River,Flat,Flat,65° F / 18° C,64° F / 18° C,BRU
+IRONMAN 70.3 Weymouth,"Dorset, England",Ocean,Rolling,Flat,59° F / 15° C,63° F / 17° C,SOU
+IRONMAN 70.3 Michigan,"Frankfort, Michigan",Lake,Rolling,Rolling,67° F / 19° C,65° F / 18° C,TVC
+IRONMAN 70.3 Sunshine Coast,"Mooloolaba, Queensland",Ocean,Flat,Rolling,79° F / 26° C,72° F / 22° C,BNE
+IRONMAN 70.3 Erkner Berlin-Brandenburg,"Erkner, Berlin, Germany",Lake,Flat,Flat,73° F / 23° C,68° F / 20° C,BER
+IRONMAN 70.3 New York,"Jones Beach, New York",Bay,Flat,Flat,70° F / 21° C,65° F / 18° C,JFK | LGA
+IRONMAN 70.3 Italy Emilia-Romagna,"Emilia-Romagna, Italy",Ocean,Flat,Rolling,77° F / 25° C,72° F / 22° C,BLQ
+IRONMAN 70.3 Cozumel,"Cozumel, Mexico",Ocean,Flat,Flat,81° F / 27° C,84° F / 29° C,CZM
+IRONMAN 70.3 Western Sydney,"Penrith, New South Wales",Lake,Flat,Flat,73° F / 23° C,66° F / 19° C,SYD
+IRONMAN 70.3 Sao Paulo,"Sao Paulo, Brazil",Reservoir,Flat,Flat,77° F / 25° C,71° F / 22° C,CGH
+IRONMAN 70.3 Washington Tri-Cities,"Richland, Washington",River,Rolling,Flat,70° F / 21° C,68° F / 20° C,PCS
+"IRONMAN 70.3 Belgrade, Serbia","Belgrade, Serbia",Lake,Flat,Flat,70° F / 21° C,68° F / 20° C,BEG
+IRONMAN 70.3 Augusta,"Augusta, Georgia",River,Rolling,Flat,80° F / 27° C,73° F / 23° C,AGS
+IRONMAN 70.3 Waco,"Waco, Texas",River,Flat,Rolling,65° F / 18° C,65° F / 18° C,ACT
+IRONMAN 70.3 Portugal - Cascais,"Cascais, Portugal",Bay,Hilly,Rolling,65° F / 18° C,62° F / 17° C,LIS
+IRONMAN 70.3 Porec,"Istria, Croatia",Ocean,Rolling,Rolling,70° F / 21° C,64° F / 18° C,PUY
+IRONMAN 70.3 Riviera Nayarit,"Riviera Nayarit, Mexico",Ocean,Flat,Flat,86° F / 30° C,80° F / 27° C,PVR
+IRONMAN 70.3 North Carolina,"Wilmington, North Carolina",Ocean,Flat,Rolling,65° F / 18° C,65° F / 18° C,ILM
+IRONMAN 70.3 Florianópolis,"Florianopolis, Brazil",Ocean,Rolling,Flat,69° F / 21° C,68° F / 20° C,FLN
+IRONMAN 70.3 Langkawi,"Langkawi, Malaysia",Ocean,Hilly,Flat,88° F / 31° C,82° F / 28° C,LGK
+IRONMAN 70.3 Kenting ,"Kenting, Taiwan",Ocean,Flat,Rolling,86° F / 30° C,73° F / 23° C,KHH
+IRONMAN 70.3 World Championship - Women,"Marbella, Spain",Ocean,Hilly,Flat,70° F / 21° C,61° F / 16° C,AGP
+IRONMAN 70.3 Melbourne,"St. Kilda, Victoria",Bay,Flat,Flat,63° F / 17° C,64° F / 18° C,MEL
+IRONMAN 70.3 World Championship - Men,"Marbella, Spain",Ocean,Hilly,Flat,70° F / 21° C,61° F / 16° C,AGP
+IRONMAN 70.3 Mossel Bay - African TriClub Championship,"Mossel Bay, South Africa",Bay,Hilly,Rolling,64° F / 18° C,67° F / 19° C,GRJ
+IRONMAN 70.3 Davao Philippines,"Davao City, Philippines",Ocean,Flat,Flat,92° F / 33° C,82° F / 28° C,DVO
+IRONMAN 70.3 Los Cabos,"Los Cabos, Mexico",Ocean,Rolling,Flat,77° F / 25° C,84° F / 29° C,SJD
+IRONMAN 70.3 Taupo,"Taupo, New Zealand",Lake,Rolling,Flat,68° F / 20° C,62° F / 17° C,TUO
+IRONMAN 70.3 Buenos Aires,"Buenos Aires, Argentina",Lake,Rolling,Flat,62° F / 17° C,64° F / 18° C,EZE
+IRONMAN 70.3 Fortaleza,"Fortaleza, Brazil",Ocean,Flat,Flat,88° F / 31° C,82° F / 28° C,FOR
+IRONMAN 70.3 Tasmania,"Hobart, Tasmania",River,Hilly,Flat,60° F / 16° C,62° F / 17° C,HBA
+IRONMAN 70.3 Valdivia,"Valdivia, Chile",River,Flat,Flat,68° F / 20° C,58° F / 14° C,ZAL
+IRONMAN 70.3 Aracaju - Sergipe,"Aracaju, Brazil",River,Flat,Flat,84° F / 29° C,77° F / 25° C,AJU
+"IRONMAN 70.3 Bangsaen, Thailand","Bangsaen, Thailand",Ocean,Flat,Rolling,85° F / 29° C,76° F / 24° C,BKK
+IRONMAN 70.3 Goa,India,Ocean,Rolling,Flat,82° F / 28° C,78° F / 26° C,GOI
+IRONMAN 70.3 Goseong,"Goseong, Korea",Ocean,Rolling,Hilly,73° F / 23° C,68° F / 20° C,PUS
+IRONMAN 70.3 Türkiye,"Belek, Antalya, Türkİye (Turkey)",Ocean,Flat,Flat,75° F / 24° C,72° F / 22° C,AYT
+IRONMAN 70.3 Gdynia,"Gdynia, Poland",Bay,Rolling,Rolling,77° F / 25° C,66° F / 19° C,GDN
+IRONMAN 70.3 Les Sables d'Olonne-Vendée,"Vendėe, France",Ocean,Rolling,Flat,75° F / 24° C,66° F / 19° C,NTE
+IRONMAN 70.3 Marbella,"Marbella, Spain",Ocean,Hilly,Flat,70° F / 21° C,61° F / 16° C,AGP
+IRONMAN 70.3 Egypt,"Sahl Hasheesh, Egypt",Bay,Rolling,Flat,82° F / 28° C,82° F / 28° C,HRG
+IRONMAN 70.3 Salalah,"Salalah, Oman",Bay,Rolling,Flat,75° F / 24° C,77° F / 25° C,SLL
+"IRONMAN 70.3 Ireland, Cork","Youghal/Cork, Ireland",Bay,Hilly,Flat,65° F / 18° C,61° F / 16° C,ORK
+"IRONMAN 70.3 Tiberias, Sea of Galilee","Tiberias, Israel",Lake,Flat,Flat,72° F / 22° C,77° F / 25° C,TLV
+IRONMAN 70.3 Nelson Mandela Bay,"Nelson Mandela Bay, Port Elizabeth",Bay,Rolling,Rolling,73° F / 23° C,68° F / 20° C,PLZ
+IRONMAN 70.3 Tangier,"Tangier, Morocco",Ocean,Hilly,Flat,77° F / 25° C,66° F / 19° C,TNG
+IRONMAN 70.3 Rwanda,"Rwanda, Africa",Lake,Rolling,Hilly,79° F / 26° C,76° F / 24° C,KGL
+IRONMAN 70.3 Phu Quoc,"Phu Quoc, Viet Nam",Ocean,Flat,Flat,82° F / 28° C,84° F / 29° C,PQC
+"IRONMAN 70.3 Marathon, Greece","Marathon, Attica, Greece",Ocean,Flat,Flat,73° F / 23° C,72° F / 22° C,ATH
