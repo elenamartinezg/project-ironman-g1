@@ -102,15 +102,14 @@ country = st.selectbox("País", countries)
 if st.button("Predecir tiempos"):
     st.subheader("Resultados")
     df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
-    elite
 
     swim_time = predict_time(model_swim, df_data)
     bike_time = predict_time(model_bike, df_data)
     run_time = predict_time(model_run, df_data)
     finishactive_time = predict_time(model_finishactivetime, df_data)
 
-    st.write(f"*Tiempo Natación:* {seconds_to_hms(swim_time)} minutos")
-    st.write(f"*Tiempo Bicicleta:* {seconds_to_hms(bike_time)} minutos")
-    st.write(f"*Tiempo Carrera:* {seconds_to_hms(run_time)} minutos")
-    st.write(f"*Tiempo Total (Suma):* {seconds_to_hms(swim_time) + seconds_to_hms(bike_time) + seconds_to_hms(run_time)} minutos")
-    st.write(f"*Tiempo Total (Modelo):* {seconds_to_hms(swim_time) + seconds_to_hms(bike_time) + seconds_to_hms(run_time)} minutos")
+    st.write(f"*Tiempo Natación:* {seconds_to_hms(swim_time)}")
+    st.write(f"*Tiempo Bicicleta:* {seconds_to_hms(bike_time)}")
+    st.write(f"*Tiempo Carrera:* {seconds_to_hms(run_time)}")
+    st.write(f"*Tiempo Total (Suma):* {seconds_to_hms(swim_time+bike_time+run_time)}")
+    st.write(f"*Tiempo Total (Modelo):* {seconds_to_hms(finishactive_time)}")
