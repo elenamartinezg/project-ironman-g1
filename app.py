@@ -4,7 +4,7 @@ import pickle
 
 import seaborn as sns
 import matplotlib.pyplot as plt
-from pathlib import Path
+from scipy.stats import percentileofscore
 
 # Cargar los modelos
 def load_model(model_path):
@@ -86,23 +86,23 @@ model_run = load_model('model_xgb_run.pkl')
 model_finishactivetime = load_model('model_xgb_finishactivetime.pkl')
 
 # Configurar la app de Streamlit
-st.title("Predicción de tiempos para Ironman 70.3")
+st.title("Predicción de tiempos para Ironman 70.3 🏊‍♂️🚴‍♂️🏃‍♂️")
 
 # Cargar valores únicos de las columnas requeridas
-event_locations = load_unique_values('df_merged_small.csv', 'EventLocation')
-genders = load_unique_values('df_merged_small.csv', 'Gender')
-countries = load_unique_values('df_merged_small.csv', 'Country')
+event_locations = sorted(load_unique_values('df_merged_filtered.csv', 'EventLocation'))
+genders = sorted(load_unique_values('df_merged_filtered.csv', 'Gender'))
+countries = sorted(load_unique_values('df_merged_filtered.csv', 'Country'))
 
 # Interfaz de usuario
 st.header("Introduce los detalles")
-age = st.slider("Edad", 18, 70, 30)
+age = st.slider("Edad", 18, 75, 30)
 elite = st.checkbox("¿Eres atleta de élite?")
-event = st.selectbox("Carrera", event_locations)
-gender = st.selectbox("Género", genders)
-country = st.selectbox("País", countries)
+event = st.selectbox("Carrera", event_locations, index=31)
+gender = st.selectbox("Género", genders, index=1)
+country = st.selectbox("País", countries, index=83)
 
 if st.button("Predecir tiempos"):
-    st.subheader("Resultados")
+    st.subheader("Resultados ⏱️")
     df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
 
     swim_time = predict_time(model_swim, df_data)
@@ -110,30 +110,41 @@ if st.button("Predecir tiempos"):
     run_time = predict_time(model_run, df_data)
     finishactive_time = predict_time(model_finishactivetime, df_data)
 
-    st.write(f"*Tiempo Natación:* {seconds_to_hms(swim_time)}")
-    st.write(f"*Tiempo Bicicleta:* {seconds_to_hms(bike_time)}")
-    st.write(f"*Tiempo Carrera:* {seconds_to_hms(run_time)}")
-    st.write(f"*Tiempo Total (Suma):* {seconds_to_hms(swim_time+bike_time+run_time)}")
-    st.write(f"*Tiempo Total (Modelo):* {seconds_to_hms(finishactive_time)}")
+    st.write(f"🏊‍♂️*Tiempo Natación:* {seconds_to_hms(swim_time)}")
+    st.write(f"🚴‍♂️*Tiempo Bicicleta:* {seconds_to_hms(bike_time)}")
+    st.write(f"🏃‍♂️*Tiempo Carrera:* {seconds_to_hms(run_time)}")
+    st.write(f"🏁*Tiempo Total (Suma):* {seconds_to_hms(swim_time+bike_time+run_time)}")
+    # st.write(f"🏁*Tiempo Total (Modelo):* {seconds_to_hms(finishactive_time)}")
 
     df_merged = pd.read_csv("df_merge_final.csv")
     df_merged['FinishActiveTime'] = df_merged['RunTime'] + df_merged['SwimTime'] + df_merged['BikeTime']
 
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='SwimTime',  color='lightblue', alpha=0.5, label='SwimTime')
-    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'{swim_time:.2f}')
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='BikeTime', color='orange', alpha=0.5, label='BikeTime')
-    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'{bike_time:.2f}')
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='RunTime', color='green', alpha=0.5, label='RunTime')
-    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'{run_time:.2f}')
+    sns.set(style="white")
+
+    fig = plt.figure(figsize=(10, 6))
+
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='SwimTime',  color='lightblue', alpha=0.5, label='SwimTime')
+    p_swim = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['SwimTime'], swim_time), 1)
+    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'p{p_swim}: {swim_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='BikeTime', color='orange', alpha=0.5, label='BikeTime')
+    p_bike = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['BikeTime'], bike_time), 1)
+    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'p{p_bike}: {bike_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='RunTime', color='green', alpha=0.5, label='RunTime')
+    p_run = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['RunTime'], run_time), 1)
+    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'p{p_run}: {run_time:.2f}')
     plt.xlabel("SwimTime, RunTime, BikeTime")
     plt.title("Tus tiempos respecto al resto de participantes")
     plt.legend()
-    plt.show()
+    # plt.show()
+    st.pyplot(fig)
 
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='FinishActiveTime', palette='purple', alpha=0.5, label='FinishActiveTime')
-    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'{finishactive_time:.2f}')
+    fig = plt.figure(figsize=(10, 6))
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='FinishActiveTime', palette='purple', alpha=0.5, label='FinishActiveTime')
+    p_finishactive = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['FinishActiveTime'], finishactive_time), 1)
+    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'p{p_finishactive}: {finishactive_time:.2f}')
     plt.title("Tu tiempo total respecto al resto de participantes")
     plt.xlabel("FinishActiveTime")
     plt.legend()
-    plt.show()
+    # plt.show()
+    st.pyplot(fig)
 
