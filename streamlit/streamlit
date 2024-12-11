@@ -1,0 +1,27 @@
+from sklearn.preprocessing import LabelEncoder
+
+df_encoded = pd.get_dummies(df_encoded, columns=['Gender'], drop_first=True)
+
+df_encoded.drop(columns='CountryISO2',inplace=True)
+# df_encoded.drop(columns='Airport',inplace=True)
+
+label_encoder = LabelEncoder()
+# df_encoded['Country_Encoded'] = label_encoder.fit_transform(df_encoded['Country'])
+df_encoded.drop(columns='Country',inplace=True)
+
+# df_encoded = pd.get_dummies(df_encoded, columns=['EventLocation'])
+# df_encoded['EventLocation_Encoded'] = label_encoder.fit_transform(df_encoded['EventLocation'])
+df_encoded.drop(columns='EventLocation',inplace=True)
+df_encoded.drop(columns='Location',inplace=True)
+
+# df_encoded['EventCountry_Encoded'] = label_encoder.fit_transform(df_encoded['EventCountry'])
+df_encoded.drop(columns='EventCountry',inplace=True)
+               
+df_encoded = pd.get_dummies(df_encoded, columns=['Run Type'])
+df_encoded = pd.get_dummies(df_encoded, columns=['Swim Type'])
+df_encoded = pd.get_dummies(df_encoded, columns=['Bike Type'])
+
+df_encoded.drop(columns='AgeGroup',inplace=True)
+df_encoded.drop(columns='Distance from Country Center (km)',inplace=True)
+
+df_encoded = df_encoded.replace({True: 1, False: 0})
