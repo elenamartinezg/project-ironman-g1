@@ -58,6 +58,9 @@ def get_df_model(df_data, features):
 
     return df_model[features]
 
+def seconds_to_hms(seconds):
+    return pd.to_datetime(seconds, unit='s').strftime('%H:%M:%S')
+
 # Predicción basada en modelos
 def predict_time(model, df_data):
     if model is None:
@@ -100,6 +103,6 @@ if st.button("Predecir tiempos"):
     bike_time = predict_time(model_bike, df_data)
     run_time = predict_time(model_run, df_data)
 
-    st.write(f"*Tiempo natación:* {swim_time} minutos")
-    st.write(f"*Tiempo bicicleta:* {bike_time} minutos")
-    st.write(f"*Tiempo carrera:* {run_time} minutos")
+    st.write(f"*Tiempo natación:* {seconds_to_hms(swim_time)} minutos")
+    st.write(f"*Tiempo bicicleta:* {seconds_to_hms(bike_time)} minutos")
+    st.write(f"*Tiempo carrera:* {seconds_to_hms(run_time)} minutos")
