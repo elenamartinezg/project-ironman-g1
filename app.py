@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-from pathlib import Path
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import percentileofscore
 
 # Cargar los modelos
 def load_model(model_path):
@@ -60,8 +62,8 @@ def get_df_model(df_data, features):
 
     return df_model[features]
 
-def seconds_to_hms(seconds):
-    return pd.to_datetime(seconds, unit='s').strftime('%H:%M:%S')
+def seconds_to_hms(seconds, format='%H:%M:%S'):
+    return pd.to_datetime(seconds, unit='s').strftime(format)
 
 # Predicción basada en modelos
 def predict_time(model, df_data):
@@ -72,7 +74,7 @@ def predict_time(model, df_data):
         input_data = get_df_model(df_data, features)
         # Realizar predicción
         prediction = model.predict(input_data)
-        return round(prediction[0], 2)
+        return round(prediction[0], 2), input_data
     except Exception as e:
         st.error(f"Error al realizar la predicción: {e}")
         return "Error en la predicción"
@@ -84,32 +86,70 @@ model_run = load_model('model_xgb_run.pkl')
 model_finishactivetime = load_model('model_xgb_finishactivetime.pkl')
 
 # Configurar la app de Streamlit
-st.title("Predicción de tiempos para Ironman 70.3")
+st.title("Predicción de tiempos para Ironman 70.3 🏊‍♂️🚴‍♂️🏃‍♂️")
 
 # Cargar valores únicos de las columnas requeridas
-event_locations = load_unique_values('df_merged_small.csv', 'EventLocation')
-genders = load_unique_values('df_merged_small.csv', 'Gender')
-countries = load_unique_values('df_merged_small.csv', 'Country')
+event_locations = sorted(load_unique_values('df_merged_filtered.csv', 'EventLocation'))
+genders = sorted(load_unique_values('df_merged_filtered.csv', 'Gender'))
+countries = sorted(load_unique_values('df_merged_filtered.csv', 'Country'))
 
 # Interfaz de usuario
 st.header("Introduce los detalles")
-age = st.slider("Edad", 18, 70, 30)
+age = st.slider("Edad", 18, 75, 30)
 elite = st.checkbox("¿Eres atleta de élite?")
-event = st.selectbox("Carrera", event_locations)
-gender = st.selectbox("Género", genders)
-country = st.selectbox("País", countries)
+event = st.selectbox("Carrera", event_locations, index=31)
+gender = st.selectbox("Género", genders, index=1)
+country = st.selectbox("País", countries, index=83)
 
 if st.button("Predecir tiempos"):
-    st.subheader("Resultados")
     df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
+    finishactive_time, df_model = predict_time(model_finishactivetime, df_data)
 
-    swim_time = predict_time(model_swim, df_data)
-    bike_time = predict_time(model_bike, df_data)
-    run_time = predict_time(model_run, df_data)
-    finishactive_time = predict_time(model_finishactivetime, df_data)
+    st.subheader(f"{event.upper()}")
+    st.write(f"☀️ Avg. Air Temp: {df_model['Air Temperature (°C)'].values[0]} °C |💧 Avg. Water Temp: {df_model['Water Temperature (°C)'].values[0]} °C")
+    
 
-    st.write(f"*Tiempo Natación:* {seconds_to_hms(swim_time)}")
-    st.write(f"*Tiempo Bicicleta:* {seconds_to_hms(bike_time)}")
-    st.write(f"*Tiempo Carrera:* {seconds_to_hms(run_time)}")
-    st.write(f"*Tiempo Total (Suma):* {seconds_to_hms(swim_time+bike_time+run_time)}")
-    st.write(f"*Tiempo Total (Modelo):* {seconds_to_hms(finishactive_time)}")
+    st.subheader("Resultados ⏱️")
+
+    swim_time, _ = predict_time(model_swim, df_data)
+    bike_time, _ = predict_time(model_bike, df_data)
+    run_time, _ = predict_time(model_run, df_data)
+
+    st.write(f"🏊‍♂️ **Natación** | Distancia: 1900 m | Tiempo: **{seconds_to_hms(swim_time)}** | Ritmo Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
+    st.write(f"🚴‍♂️ **Bicicleta** | Distancia: 90 km | Tiempo: **{seconds_to_hms(bike_time)}** | Velocidad Media: **{round(90/(bike_time/3600), 1)} km/h**")
+    st.write(f"🏃‍♂️ **Carrera** | Distancia: 21.1 km | Tiempo: **{seconds_to_hms(run_time)}** | Ritmo Medio: **{seconds_to_hms(run_time/21.1, '%M:%S')} /km**")
+    st.write(f"🏁 **Total** (Suma) | Distancia: 113 km | Tiempo: **{seconds_to_hms(swim_time+bike_time+run_time)}**")
+    st.write(f"🏁 **Total** (Modelo) | Distancia: 113 km | Tiempo: **{seconds_to_hms(finishactive_time)}**")
+
+    df_merged = pd.read_csv("df_merge_final.csv")
+    df_merged['FinishActiveTime'] = df_merged['RunTime'] + df_merged['SwimTime'] + df_merged['BikeTime']
+
+    sns.set(style="white")
+
+    fig = plt.figure(figsize=(10, 6))
+
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='SwimTime',  color='lightblue', alpha=0.5, label='SwimTime')
+    p_swim = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['SwimTime'], swim_time), 1)
+    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'p{p_swim}: {swim_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='BikeTime', color='orange', alpha=0.5, label='BikeTime')
+    p_bike = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['BikeTime'], bike_time), 1)
+    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'p{p_bike}: {bike_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='RunTime', color='green', alpha=0.5, label='RunTime')
+    p_run = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['RunTime'], run_time), 1)
+    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'p{p_run}: {run_time:.2f}')
+    plt.xlabel("SwimTime, RunTime, BikeTime")
+    plt.title("Tus tiempos respecto al resto de participantes")
+    plt.legend()
+    # plt.show()
+    st.pyplot(fig)
+
+    fig = plt.figure(figsize=(10, 6))
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='FinishActiveTime', palette='purple', alpha=0.5, label='FinishActiveTime')
+    p_finishactive = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['FinishActiveTime'], finishactive_time), 1)
+    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'p{p_finishactive}: {finishactive_time:.2f}')
+    plt.title("Tu tiempo total respecto al resto de participantes")
+    plt.xlabel("FinishActiveTime")
+    plt.legend()
+    # plt.show()
+    st.pyplot(fig)
+
