@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+import seaborn as sns
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Cargar los modelos
@@ -113,3 +115,25 @@ if st.button("Predecir tiempos"):
     st.write(f"*Tiempo Carrera:* {seconds_to_hms(run_time)}")
     st.write(f"*Tiempo Total (Suma):* {seconds_to_hms(swim_time+bike_time+run_time)}")
     st.write(f"*Tiempo Total (Modelo):* {seconds_to_hms(finishactive_time)}")
+
+    df_merged = pd.read_csv("df_merge_final.csv")
+    df_merged['FinishActiveTime'] = df_merged['RunTime'] + df_merged['SwimTime'] + df_merged['BikeTime']
+
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='SwimTime',  color='lightblue', alpha=0.5, label='SwimTime')
+    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'{swim_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='BikeTime', color='orange', alpha=0.5, label='BikeTime')
+    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'{bike_time:.2f}')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='RunTime', color='green', alpha=0.5, label='RunTime')
+    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'{run_time:.2f}')
+    plt.xlabel("SwimTime, RunTime, BikeTime")
+    plt.title("Tus tiempos respecto al resto de participantes")
+    plt.legend()
+    plt.show()
+
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == 'IRONMAN 70.3 Mallorca'], x='FinishActiveTime', palette='purple', alpha=0.5, label='FinishActiveTime')
+    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'{finishactive_time:.2f}')
+    plt.title("Tu tiempo total respecto al resto de participantes")
+    plt.xlabel("FinishActiveTime")
+    plt.legend()
+    plt.show()
+
