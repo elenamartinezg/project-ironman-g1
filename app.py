@@ -50,6 +50,8 @@ def get_df_model(df_data, features):
         return age_band, age_group
 
     df_data[['AgeBand', 'AgeGroup']] = df_data['Age'].apply(lambda age: pd.Series(get_age_band_and_group(age)))
+    df_data['AgeBand'] = df_data['Elite'].apply(lambda x: 0 if x == True else df_data['AgeBand'])
+    df_data['AgeGroup'] = df_data['Elite'].apply(lambda x: '00' if x == True else df_data['AgeGroup'])
 
     df_filter = df_merge[['Country','Location', 'Swim Type', 'Bike Type', 'Run Type', 'Latitude', 'Longitude', 'Altitude (m)', 'Air Temperature (°C)', 'Water Temperature (°C)', 'EventCountry', 'Distance from Country Center (km)', 'Distance from Country Center (m)', 'EventLocation']].drop_duplicates()
     df_model = pd.merge(df_data, df_filter, on=['EventLocation', 'Country', 'EventCountry'], how='inner')
@@ -101,6 +103,7 @@ if st.button("Predecir tiempos"):
     st.subheader("Resultados")
     df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
     elite
+
     swim_time = predict_time(model_swim, df_data)
     bike_time = predict_time(model_bike, df_data)
     run_time = predict_time(model_run, df_data)
