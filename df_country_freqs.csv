@@ -1,0 +1,224 @@
+Country,Frequency,Country_Encoded
+United States,156625,0
+Australia,31410,1
+Canada,22458,2
+Mexico,18835,3
+Germany,14885,4
+Brazil,12567,5
+United Kingdom,12250,6
+Switzerland,8865,7
+France,8577,8
+Poland,8122,9
+Philippines,7052,10
+Colombia,6423,11
+Japan,6360,12
+Chile,6326,13
+Argentina,6234,14
+South Africa,5105,15
+Ecuador,4834,16
+New Zealand,4589,17
+Spain,4486,18
+Italy,3084,19
+Belgium,2647,20
+Netherlands,2095,21
+Puerto Rico,2090,22
+Peru,1554,23
+Venezuela,1522,24
+Costa Rica,1324,25
+Denmark,1286,26
+Ireland,1271,27
+Austria,1206,28
+Russia,1189,29
+Singapore,1170,30
+South Korea,1033,31
+Malaysia,1033,32
+Guatemala,1031,33
+Sweden,1021,34
+Panama,944,35
+Norway,690,36
+Uruguay,687,37
+Vietnam,648,38
+Hong Kong,643,39
+India,641,40
+Czech Republic,446,41
+China,386,42
+Ukraine,365,43
+Estonia,345,44
+Luxembourg,335,45
+Bahrain,334,46
+Indonesia,305,47
+Finland,305,48
+Dominican Republic,303,49
+Thailand,270,50
+Türkiye,236,51
+Bolivia,226,52
+Portugal,206,53
+Hungary,202,54
+Taiwan,197,55
+Slovakia,192,56
+Paraguay,180,57
+Israel,180,58
+Morocco,160,59
+Egypt,154,60
+El Salvador,152,61
+Latvia,149,62
+Honduras,129,63
+Lithuania,126,64
+United Arab Emirates,110,65
+Romania,102,66
+Greece,102,67
+Bermuda,99,68
+Belarus,99,69
+Guadeloupe,85,70
+Saudi Arabia,78,71
+Aruba,77,72
+Kuwait,73,73
+Kazakhstan,72,74
+Cayman Islands,68,75
+Slovenia,59,76
+Iceland,59,77
+Guam,59,78
+New Caledonia,51,79
+Bahamas,47,80
+Lebanon,46,81
+Malta,45,82
+Nicaragua,41,83
+Armenia,41,84
+United States Virgin Islands,40,85
+Trinidad and Tobago,40,86
+Oman,39,87
+Cuba,38,88
+Andorra,37,89
+Qatar,36,90
+Jamaica,36,91
+Croatia,36,92
+Eswatini,34,93
+Zimbabwe,33,94
+Tunisia,33,95
+Serbia,33,96
+Sri Lanka,29,97
+Iran,27,98
+Monaco,26,99
+Jordan,26,100
+United States Minor Outlying Islands,25,101
+Reunion,25,102
+Jersey,24,103
+Sierra Leone,23,104
+Georgia,23,105
+Martinique,22,106
+Macau,22,107
+Guernsey,22,108
+Liechtenstein,19,109
+Cyprus,19,110
+Curacao,19,111
+British Virgin Islands,19,112
+Syria,18,113
+Azerbaijan,18,114
+Papua New Guinea,17,115
+Bulgaria,17,116
+Algeria,16,117
+Afghanistan,16,118
+Brunei Darussalam,14,119
+Bosnia and Herzegovina,13,120
+Antarctica,13,121
+Vatican,12,122
+Uzbekistan,12,123
+Mozambique,12,124
+Kenya,12,125
+Iraq,12,126
+Gibraltar,12,127
+Fiji,12,128
+Albania,12,129
+Gabon,11,130
+Vanuatu,10,131
+Moldova,10,132
+French Guiana,10,133
+DR Congo,10,134
+Pakistan,9,135
+Grenada,9,136
+French Polynesia,9,137
+American Samoa,9,138
+Nepal,8,139
+Isle of Man,8,140
+Belize,8,141
+Barbados,8,142
+Northern Mariana Islands,7,143
+Nigeria,7,144
+Mauritius,7,145
+Comoros,7,146
+Seychelles,6,147
+Laos,6,148
+Central African Republic,6,149
+Uganda,5,150
+St. Barths,5,151
+Mongolia,5,152
+"Micronesia, Fed. Sts.",5,153
+Kyrgyz Republic,5,154
+Cote d'Ivoire,5,155
+Burundi,5,156
+Suriname,4,157
+St. Pierre and Miquelon,4,158
+St. Kitts and Nevis,4,159
+Palestine,4,160
+Myanmar,4,161
+Madagascar,4,162
+Ghana,4,163
+Gambia,4,164
+Equatorial Guinea,4,165
+Cameroon,4,166
+Cabo Verde,4,167
+Botswana,4,168
+Benin,4,169
+Tanzania,3,170
+Tajikistan,3,171
+Senegal,3,172
+Saint-Martin,3,173
+Rwanda,3,174
+Pitcairn,3,175
+Maldives,3,176
+Liberia,3,177
+Haiti,3,178
+French Southern Territories,3,179
+Faeroe Islands,3,180
+Ethiopia,3,181
+Cocos (Keeling) Islands,3,182
+Cambodia,3,183
+Bangladesh,3,184
+Anguilla,3,185
+Zambia,2,186
+Togo,2,187
+Sint Maarten,2,188
+Samoa,2,189
+Niger,2,190
+Nauru,2,191
+Libya,2,192
+Kiribati,2,193
+Guyana,2,194
+Greenland,2,195
+Cook Islands,2,196
+"Bonaire, Saint Eustatius and Saba",2,197
+Bhutan,2,198
+Antigua and Barbuda,2,199
+Yemen,1,200
+Western Sahara,1,201
+Turks and Caicos Islands,1,202
+Tonga,1,203
+Timor-Leste,1,204
+Sudan,1,205
+St. Lucia,1,206
+St. Helena,1,207
+South Georgia and South Sandwich Is.,1,208
+Sao Tome and Principe,1,209
+San Marino,1,210
+North Macedonia,1,211
+North Korea,1,212
+Montserrat,1,213
+Montenegro,1,214
+Marshall Islands,1,215
+Falkland Islands,1,216
+Eritrea,1,217
+Djibouti,1,218
+Christmas Island,1,219
+Bouvet Island,1,220
+Angola,1,221
+Aland Islands,1,222
