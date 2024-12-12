@@ -88,7 +88,7 @@ model_run = load_model('model_xgb_run.pkl')
 model_finishactivetime = load_model('model_xgb_finishactivetime.pkl')
 
 # Configurar la app de Streamlit
-st.title("Predicción de tiempos para Ironman 70.3 🏊‍♂️🚴‍♂️🏃‍♂️")
+st.title("Predicción de tiempos para Ironman 70.3 🏊🏽‍♀️🚴🏽‍♀️🏃🏽‍♀️")
 
 # Cargar valores únicos de las columnas requeridas
 event_locations = sorted(load_unique_values('df_merged_filtered.csv', 'EventLocation'))
@@ -129,15 +129,15 @@ if st.button("Predecir tiempos"):
     run_time = predict_time(model_run, df_data)
     finishactive_time = predict_time(model_finishactivetime, df_data)
 
-    st.markdown("🏊‍♂️ **Natación** | Distancia: 1900 m")
+    st.markdown("🏊🏽‍♀️ **Natación** | Distancia: 1900 m")
     st.success(f"Tiempo: **{seconds_to_hms(swim_time)}**")
     st.success(f"Ritmo Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
                
-    st.markdown("🚴‍♂️ **Bicicleta** | Distancia: 90 km")
+    st.markdown("🚴🏽‍♀️ **Bicicleta** | Distancia: 90 km")
     st.success(f"Tiempo: **{seconds_to_hms(bike_time)}**")
     st.success(f"Velocidad Media: **{round(90 / (bike_time/3600), 1)} km/h**")
 
-    st.markdown("🏃‍♂️ **Carrera** | Distancia: 21.1 km")
+    st.markdown("🏃🏽‍♀️ **Carrera** | Distancia: 21.1 km")
     st.success(f"Tiempo: **{seconds_to_hms(run_time)}**")
     st.success(f"Ritmo Medio: **{seconds_to_hms(run_time/21.1, '%M:%S')} /km**")
     
