@@ -5,6 +5,7 @@ import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import percentileofscore
+from src.utils import *
 
 # Cargar los modelos
 def load_model(model_path):
@@ -55,10 +56,11 @@ def get_df_model(df_data, features):
     df_data['AgeBand'] = df_data['Elite'].apply(lambda x: 0 if x == True else df_data['AgeBand'])
     df_data['AgeGroup'] = df_data['Elite'].apply(lambda x: '00' if x == True else df_data['AgeGroup'])
 
-    df_filter = df_merge[['Country','Location', 'Swim Type', 'Bike Type', 'Run Type', 'Latitude', 'Longitude', 'Altitude (m)', 'Air Temperature (°C)', 'Water Temperature (°C)', 'EventCountry', 'Distance from Country Center (km)', 'Distance from Country Center (m)', 'EventLocation']].drop_duplicates()
-    df_model = pd.merge(df_data, df_filter, on=['EventLocation', 'Country', 'EventCountry'], how='inner')
+    df_filter = df_merge[['Location', 'Swim Type', 'Bike Type', 'Run Type', 'Latitude', 'Longitude', 'Altitude (m)', 'Air Temperature (°C)', 'Water Temperature (°C)', 'EventCountry', 'EventLocation']].drop_duplicates()
+    df_model = pd.merge(df_data, df_filter, on=['EventLocation', 'EventCountry'], how='inner')
     df_model = pd.merge(df_model, df_types_per_location, on='EventLocation_Encoded', how='inner')
     df_model['Is_Local'] = (df_model['Country'] == df_model['EventCountry']).astype(int)
+    df_model['Distance from Country Center (m)'] = df_model.apply(calculate_distance_meters, axis=1, df=df_model)
 
     return df_model[features]
 
@@ -133,7 +135,7 @@ if st.button("Predecir tiempos"):
                
     st.markdown("🚴‍♂️ **Bicicleta** | Distancia: 90 km")
     st.success(f"Tiempo: **{seconds_to_hms(bike_time)}**")
-    st.success(f"Velocidad Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
+    st.success(f"Velocidad Media: **{round(90 / (bike_time/3600), 1)} km/h**")
 
     st.markdown("🏃‍♂️ **Carrera** | Distancia: 21.1 km")
     st.success(f"Tiempo: **{seconds_to_hms(run_time)}**")
