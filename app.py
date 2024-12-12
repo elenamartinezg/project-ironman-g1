@@ -74,7 +74,7 @@ def predict_time(model, df_data):
         input_data = get_df_model(df_data, features)
         # Realizar predicción
         prediction = model.predict(input_data)
-        return round(prediction[0], 2), input_data
+        return round(prediction[0], 2)
     except Exception as e:
         st.error(f"Error al realizar la predicción: {e}")
         return "Error en la predicción"
@@ -94,34 +94,57 @@ genders = sorted(load_unique_values('df_merged_filtered.csv', 'Gender'))
 countries = sorted(load_unique_values('df_merged_filtered.csv', 'Country'))
 
 # Interfaz de usuario
-st.header("Introduce los detalles")
+st.subheader("Introduce los detalles")
 age = st.slider("Edad", 18, 75, 30)
 elite = st.checkbox("¿Eres atleta de élite?")
 event = st.selectbox("Carrera", event_locations, index=31)
 gender = st.selectbox("Género", genders, index=1)
 country = st.selectbox("País", countries, index=83)
 
-if st.button("Predecir tiempos"):
-    df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
-    finishactive_time, df_model = predict_time(model_finishactivetime, df_data)
+df_merged = pd.read_csv("df_merged_filtered.csv")
 
-    st.subheader(f"{event.upper()}")
-    st.write(f"☀️ Avg. Air Temp: {df_model['Air Temperature (°C)'].values[0]} °C |💧 Avg. Water Temp: {df_model['Water Temperature (°C)'].values[0]} °C")
-    
+if st.button("Predecir tiempos"):
+
+    df_event = df_merged[df_merged.EventLocation==event][['EventLocation', 'Location', 'Swim Type', 'Bike Type', 'Run Type',
+                                                                            'Latitude', 'Longitude', 'Altitude (m)', 'Air Temperature (°C)',
+                                                                            'Water Temperature (°C)', 'EventCountry']].drop_duplicates()    
+    st.header(f"{event.upper()}")
+    st.markdown(f"Location: {df_event['Location'].values[0]} | Country: {df_event['EventCountry'].values[0].upper()} | Altitude (m): {df_event['Altitude (m)'].values[0]} m")
+    st.map(df_event, latitude="Latitude", longitude="Longitude")
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Swim", f"{df_event['Swim Type'].values[0].upper()}")
+    col2.metric("Bike", f"{df_event['Bike Type'].values[0].upper()}")
+    col3.metric("Run", f"{df_event['Run Type'].values[0].upper()}")
+    col4.metric("☀️ Avg. Air Temp", f"{df_event['Air Temperature (°C)'].values[0]} °C")
+    col5.metric("💧 Avg. Water Temp", f"{df_event['Water Temperature (°C)'].values[0]} °C")
 
     st.subheader("Resultados ⏱️")
+    df_data = pd.DataFrame({'Age': [age], 'Elite': [elite], 'EventLocation': [event], 'Gender': [gender], 'Country': [country]})
 
-    swim_time, _ = predict_time(model_swim, df_data)
-    bike_time, _ = predict_time(model_bike, df_data)
-    run_time, _ = predict_time(model_run, df_data)
+    swim_time = predict_time(model_swim, df_data)
+    bike_time = predict_time(model_bike, df_data)
+    run_time = predict_time(model_run, df_data)
+    finishactive_time = predict_time(model_finishactivetime, df_data)
 
-    st.write(f"🏊‍♂️ **Natación** | Distancia: 1900 m | Tiempo: **{seconds_to_hms(swim_time)}** | Ritmo Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
-    st.write(f"🚴‍♂️ **Bicicleta** | Distancia: 90 km | Tiempo: **{seconds_to_hms(bike_time)}** | Velocidad Media: **{round(90/(bike_time/3600), 1)} km/h**")
-    st.write(f"🏃‍♂️ **Carrera** | Distancia: 21.1 km | Tiempo: **{seconds_to_hms(run_time)}** | Ritmo Medio: **{seconds_to_hms(run_time/21.1, '%M:%S')} /km**")
-    st.write(f"🏁 **Total** (Suma) | Distancia: 113 km | Tiempo: **{seconds_to_hms(swim_time+bike_time+run_time)}**")
-    st.write(f"🏁 **Total** (Modelo) | Distancia: 113 km | Tiempo: **{seconds_to_hms(finishactive_time)}**")
+    st.markdown("🏊‍♂️ **Natación** | Distancia: 1900 m")
+    st.success(f"Tiempo: **{seconds_to_hms(swim_time)}**")
+    st.success(f"Ritmo Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
+               
+    st.markdown("🚴‍♂️ **Bicicleta** | Distancia: 90 km")
+    st.success(f"Tiempo: **{seconds_to_hms(bike_time)}**")
+    st.success(f"Velocidad Medio: **{seconds_to_hms((swim_time / 1900) *100, '%M:%S')} /100m**")
 
-    df_merged = pd.read_csv("df_merge_final.csv")
+    st.markdown("🏃‍♂️ **Carrera** | Distancia: 21.1 km")
+    st.success(f"Tiempo: **{seconds_to_hms(run_time)}**")
+    st.success(f"Ritmo Medio: **{seconds_to_hms(run_time/21.1, '%M:%S')} /km**")
+    
+    st.markdown(f"🏁 **Total** (Suma) | Distancia: 113 km")
+    st.success(f"Tiempo: **{seconds_to_hms(swim_time+bike_time+run_time)}**")
+
+    st.markdown(f"🏁 **Total** (Modelo) | Distancia: 113 km")
+    st.success(f"Tiempo: **{seconds_to_hms(finishactive_time)}**")
+
     df_merged['FinishActiveTime'] = df_merged['RunTime'] + df_merged['SwimTime'] + df_merged['BikeTime']
 
     sns.set(style="white")
@@ -152,4 +175,8 @@ if st.button("Predecir tiempos"):
     plt.legend()
     # plt.show()
     st.pyplot(fig)
+
+else: 
+    st.map(df_merged[['Latitude', 'Longitude']].drop_duplicates(), latitude="Latitude", longitude="Longitude")
+
 
