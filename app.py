@@ -153,27 +153,35 @@ if st.button("Predecir tiempos"):
 
     fig = plt.figure(figsize=(10, 6))
 
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='SwimTime',  color='lightblue', alpha=0.5, label='SwimTime')
-    p_swim = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['SwimTime'], swim_time), 1)
-    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'p{p_swim}: {swim_time:.2f}')
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='BikeTime', color='orange', alpha=0.5, label='BikeTime')
-    p_bike = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['BikeTime'], bike_time), 1)
-    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'p{p_bike}: {bike_time:.2f}')
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='RunTime', color='green', alpha=0.5, label='RunTime')
-    p_run = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['RunTime'], run_time), 1)
-    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'p{p_run}: {run_time:.2f}')
-    plt.xlabel("SwimTime, RunTime, BikeTime")
-    plt.title("Tus tiempos respecto al resto de participantes")
+    df_merged['SwimTime(h)'] = df_merged['SwimTime'] / 3600
+    df_merged['BikeTime(h)'] = df_merged['BikeTime'] / 3600
+    df_merged['RunTime(h)'] = df_merged['RunTime'] / 3600
+    df_merged['FinishActiveTime(h)'] = df_merged['FinishActiveTime'] / 3600
+    swim_time = swim_time/3600
+    bike_time = bike_time/3600
+    run_time = run_time/3600
+    finishactive_time = finishactive_time/3600
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='SwimTime(h)',  color='lightblue', alpha=0.8, label='SwimTime')
+    p_swim = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['SwimTime(h)'], swim_time), 1)
+    plt.axvline(swim_time, color='lightblue', linestyle='--', label=f'p{p_swim}: {swim_time:.2f}h')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='BikeTime(h)', color='orange', alpha=0.5, label='BikeTime')
+    p_bike = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['BikeTime(h)'], bike_time), 1)
+    plt.axvline(bike_time, color='darkorange', linestyle='--', label=f'p{p_bike}: {bike_time:.2f}h')
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='RunTime(h)', color='green', alpha=0.5, label='RunTime')
+    p_run = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['RunTime(h)'], run_time), 1)
+    plt.axvline(run_time, color='darkgreen', linestyle='--', label=f'p{p_run}: {run_time:.2f}h')
+    plt.xlabel("SwimTime, RunTime, BikeTime (h)")
+    plt.title(f"Tus tiempos respecto al resto de participantes en {event}")
     plt.legend()
     # plt.show()
     st.pyplot(fig)
 
     fig = plt.figure(figsize=(10, 6))
-    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='FinishActiveTime', palette='purple', alpha=0.5, label='FinishActiveTime')
-    p_finishactive = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['FinishActiveTime'], finishactive_time), 1)
-    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'p{p_finishactive}: {finishactive_time:.2f}')
-    plt.title("Tu tiempo total respecto al resto de participantes")
-    plt.xlabel("FinishActiveTime")
+    sns.histplot(data=df_merged[df_merged['EventLocation'] == event], x='FinishActiveTime(h)', palette='purple', alpha=0.5, label='FinishActiveTime')
+    p_finishactive = round(percentileofscore(df_merged[df_merged['EventLocation'] == event]['FinishActiveTime(h)'], finishactive_time), 1)
+    plt.axvline(finishactive_time, color='purple', linestyle='--', label=f'p{p_finishactive}: {finishactive_time:.2f}h')
+    plt.title(f"Tu tiempo total respecto al resto de participantes en {event}")
+    plt.xlabel("FinishActiveTime (h)")
     plt.legend()
     # plt.show()
     st.pyplot(fig)
